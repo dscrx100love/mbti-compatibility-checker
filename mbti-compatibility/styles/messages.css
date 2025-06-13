@@ -1,0 +1,174 @@
+/* =================================
+   メッセージ・通知スタイル
+   ================================= */
+
+/* 成功メッセージ */
+.copy-success-message {
+    position: fixed;
+    bottom: var(--space-xl);
+    right: var(--space-xl);
+    background: var(--primary-color);
+    color: var(--text-inverse);
+    padding: var(--space-lg) var(--space-xl);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+    font-weight: 500;
+    min-width: 200px;
+    text-align: center;
+}
+
+/* エラーメッセージ */
+.error-message {
+    position: fixed;
+    top: var(--space-xl);
+    right: var(--space-xl);
+    background: var(--error-color);
+    color: var(--text-inverse);
+    padding: var(--space-lg) var(--space-xl);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+    font-weight: 500;
+    min-width: 200px;
+    text-align: center;
+}
+
+/* 警告メッセージ */
+.warning-message {
+    position: fixed;
+    top: var(--space-xl);
+    right: var(--space-xl);
+    background: var(--warning-color);
+    color: var(--text-inverse);
+    padding: var(--space-lg) var(--space-xl);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+    font-weight: 500;
+    min-width: 200px;
+    text-align: center;
+}
+
+/* 情報メッセージ */
+.info-message {
+    position: fixed;
+    top: var(--space-xl);
+    right: var(--space-xl);
+    background: var(--primary-color);
+    color: var(--text-inverse);
+    padding: var(--space-lg) var(--space-xl);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+    font-weight: 500;
+    min-width: 200px;
+    text-align: center;
+}
+
+/* ローディング状態 */
+.loading {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid var(--primary-color);
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* トースト通知 */
+.toast {
+    position: fixed;
+    bottom: var(--space-xl);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--text-primary);
+    color: var(--text-inverse);
+    padding: var(--space-lg) var(--space-xl);
+    border-radius: var(--radius-full);
+    box-shadow: var(--shadow-xl);
+    z-index: 1000;
+    animation: slideUp 0.3s ease;
+    font-weight: 500;
+    max-width: 400px;
+    text-align: center;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 20px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+/* プログレスバー */
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    margin: var(--space-md) 0;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-full);
+    transition: width 0.3s ease;
+    position: relative;
+}
+
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(
+        -45deg,
+        rgba(255, 255, 255, 0.2) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.2) 50%,
+        rgba(255, 255, 255, 0.2) 75%,
+        transparent 75%,
+        transparent
+    );
+    background-size: 50px 50px;
+    animation: move 2s linear infinite;
+}
+
+@keyframes move {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 50px 50px;
+    }
+}

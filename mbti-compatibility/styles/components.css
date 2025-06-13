@@ -1,0 +1,345 @@
+/* =================================
+   コンポーネントスタイル
+   ================================= */
+
+/* ヘッダー */
+.header {
+    background: var(--gradient-primary);
+    color: var(--text-inverse);
+    padding: var(--space-xl) 0;
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    animation: float 6s ease-in-out infinite;
+}
+
+.site-title {
+    font-size: clamp(var(--text-2xl), 4vw, var(--text-5xl));
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+    letter-spacing: 0.02em;
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 0.8s ease;
+}
+
+.site-subtitle {
+    font-size: clamp(var(--text-base), 2.5vw, var(--text-lg));
+    font-weight: 300;
+    opacity: 0.95;
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+/* メインコンテンツ */
+.main-content {
+    flex: 1;
+    padding: var(--space-3xl) 0;
+    animation: fadeInUp 0.6s ease 0.4s both;
+}
+
+/* カード */
+.card {
+    background: var(--bg-primary);
+    border-radius: var(--radius-lg);
+    padding: var(--space-3xl);
+    box-shadow: var(--shadow-md);
+    margin-bottom: var(--space-3xl);
+    transition: var(--transition-base);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.6s ease;
+}
+
+.card:hover {
+    box-shadow: var(--shadow-xl);
+    transform: translateY(-2px);
+}
+
+.card:hover::before {
+    left: 100%;
+}
+
+.card-title {
+    font-size: clamp(var(--text-xl), 3vw, var(--text-3xl));
+    color: var(--primary-dark);
+    margin-bottom: var(--space-sm);
+    text-align: center;
+    font-weight: 600;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.card-description {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-2xl);
+    font-size: var(--text-lg);
+    line-height: 1.6;
+}
+
+/* ボタン */
+.btn {
+    padding: var(--space-lg) var(--space-xl);
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: var(--text-base);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-base);
+    font-family: var(--font-family-sans);
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    letter-spacing: 0.025em;
+}
+
+.btn-primary {
+    background: var(--gradient-primary);
+    color: var(--text-inverse);
+    box-shadow: var(--shadow-md);
+    border: 1px solid transparent;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+.btn-secondary {
+    background: var(--gradient-secondary);
+    color: var(--text-inverse);
+    box-shadow: var(--shadow-md);
+    border: 1px solid transparent;
+}
+
+.btn-secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary:hover::before {
+    left: 100%;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-outline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.btn-outline:hover {
+    color: var(--text-inverse);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-outline:hover::before {
+    left: 0;
+}
+
+#diagnose-btn {
+    display: block;
+    margin: 0 auto;
+    min-width: 200px;
+}
+
+/* フッター */
+.footer {
+    background: var(--text-primary);
+    color: var(--text-inverse);
+    padding: var(--space-3xl) 0;
+    text-align: center;
+    margin-top: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 0%, rgba(113, 197, 187, 0.1) 0%, transparent 50%);
+    animation: float 8s ease-in-out infinite;
+}
+
+.copyright {
+    margin-bottom: var(--space-sm);
+    position: relative;
+    z-index: 1;
+    font-weight: 500;
+}
+
+.disclaimer {
+    font-size: var(--text-sm);
+    opacity: 0.8;
+    line-height: 1.7;
+    position: relative;
+    z-index: 1;
+}
+
+/* モーダル */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--bg-overlay);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.share-menu-content {
+    background: var(--bg-primary);
+    padding: var(--space-2xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    animation: fadeInUp 0.3s ease;
+}
+
+.share-menu h3 {
+    margin-bottom: var(--space-xl);
+    color: var(--primary-dark);
+    text-align: center;
+    font-size: var(--text-xl);
+}
+
+.share-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+}
+
+.share-buttons button {
+    padding: var(--space-lg);
+    border: 2px solid var(--primary-color);
+    background: var(--bg-primary);
+    color: var(--primary-color);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: var(--transition-base);
+    font-weight: 500;
+    font-size: var(--text-sm);
+}
+
+.share-buttons button:hover {
+    background: var(--primary-color);
+    color: var(--text-inverse);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.close-btn {
+    width: 100%;
+    padding: var(--space-md);
+    border: none;
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: var(--transition-base);
+    font-weight: 500;
+}
+
+.close-btn:hover {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+/* ページ */
+.page {
+    min-height: 60vh;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.page.hidden {
+    display: none;
+}
+
+/* アクションボタン */
+.action-buttons {
+    display: flex;
+    gap: var(--space-xl);
+    justify-content: center;
+    margin-top: var(--space-2xl);
+    flex-wrap: wrap;
+    animation: fadeInUp 1s ease 0.4s both;
+}

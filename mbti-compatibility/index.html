@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBTI相性診断 | あなたとパートナーの相性をチェック</title>
+    <meta name="description" content="16タイプの性格診断MBTIを使って、カップルや夫婦の相性を診断します。無料で簡単にチェックできます。">
+    
+    <!-- フォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- スタイルシート -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="container">
+            <h1 class="site-title">MBTI相性診断</h1>
+            <p class="site-subtitle">by 等身大couple</p>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content">
+        <div class="container">
+            <!-- 診断ページ -->
+            <div id="diagnosis-page" class="page">
+                <section class="diagnosis-section">
+                    <div class="card">
+                        <h2 class="card-title">相性診断を始める</h2>
+                        <p class="card-description">それぞれのMBTIタイプを選択してください</p>
+                        
+                        <div class="type-selection">
+                            <div class="type-selector">
+                                <label for="type1">あなたのタイプ</label>
+                                <select id="type1" class="type-select">
+                                    <option value="">選択してください</option>
+                                    <optgroup label="分析家">
+                                        <option value="INTJ">INTJ - 建築家</option>
+                                        <option value="INTP">INTP - 論理学者</option>
+                                        <option value="ENTJ">ENTJ - 指揮官</option>
+                                        <option value="ENTP">ENTP - 討論者</option>
+                                    </optgroup>
+                                    <optgroup label="外交官">
+                                        <option value="INFJ">INFJ - 提唱者</option>
+                                        <option value="INFP">INFP - 仲介者</option>
+                                        <option value="ENFJ">ENFJ - 主人公</option>
+                                        <option value="ENFP">ENFP - 運動家</option>
+                                    </optgroup>
+                                    <optgroup label="番人">
+                                        <option value="ISTJ">ISTJ - 管理者</option>
+                                        <option value="ISFJ">ISFJ - 擁護者</option>
+                                        <option value="ESTJ">ESTJ - 幹部</option>
+                                        <option value="ESFJ">ESFJ - 領事官</option>
+                                    </optgroup>
+                                    <optgroup label="探検家">
+                                        <option value="ISTP">ISTP - 巨匠</option>
+                                        <option value="ISFP">ISFP - 冒険家</option>
+                                        <option value="ESTP">ESTP - 起業家</option>
+                                        <option value="ESFP">ESFP - エンターテイナー</option>
+                                    </optgroup>
+                                </select>
+                                <div id="type1-preview" class="type-preview hidden"></div>
+                            </div>
+                            
+                            
+                            <div class="type-selector">
+                                <label for="type2">パートナーのタイプ</label>
+                                <select id="type2" class="type-select">
+                                    <option value="">選択してください</option>
+                                    <optgroup label="分析家">
+                                        <option value="INTJ">INTJ - 建築家</option>
+                                        <option value="INTP">INTP - 論理学者</option>
+                                        <option value="ENTJ">ENTJ - 指揮官</option>
+                                        <option value="ENTP">ENTP - 討論者</option>
+                                    </optgroup>
+                                    <optgroup label="外交官">
+                                        <option value="INFJ">INFJ - 提唱者</option>
+                                        <option value="INFP">INFP - 仲介者</option>
+                                        <option value="ENFJ">ENFJ - 主人公</option>
+                                        <option value="ENFP">ENFP - 運動家</option>
+                                    </optgroup>
+                                    <optgroup label="番人">
+                                        <option value="ISTJ">ISTJ - 管理者</option>
+                                        <option value="ISFJ">ISFJ - 擁護者</option>
+                                        <option value="ESTJ">ESTJ - 幹部</option>
+                                        <option value="ESFJ">ESFJ - 領事官</option>
+                                    </optgroup>
+                                    <optgroup label="探検家">
+                                        <option value="ISTP">ISTP - 巨匠</option>
+                                        <option value="ISFP">ISFP - 冒険家</option>
+                                        <option value="ESTP">ESTP - 起業家</option>
+                                        <option value="ESFP">ESFP - エンターテイナー</option>
+                                    </optgroup>
+                                </select>
+                                <div id="type2-preview" class="type-preview hidden"></div>
+                            </div>
+                        </div>
+                        
+                        <button id="diagnose-btn" class="btn btn-primary">診断する</button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 結果ページ -->
+            <div id="result-page" class="page hidden">
+                <section class="result-section">
+                    <div class="card">
+                        <div id="result-content">
+                            <!-- 診断結果がここに表示されます -->
+                        </div>
+                        
+                        <div class="action-buttons">
+                            <button id="share-btn" class="btn btn-outline">
+                                結果をシェア
+                            </button>
+                            <button id="retry-btn" class="btn btn-outline">
+                                もう一度診断
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <p class="copyright">&copy; 2024 MBTI相性診断. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/data.js"></script>
+    <script src="scripts/utils.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

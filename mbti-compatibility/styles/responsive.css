@@ -1,0 +1,435 @@
+/* レスポンシブデザイン */
+
+/* タブレット (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: 900px;
+    }
+    
+    .site-title {
+        font-size: 2.2rem;
+    }
+    
+    .card {
+        padding: 30px;
+    }
+    
+    .combinations-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+}
+
+/* スマートフォン横向き・小型タブレット (481px - 768px) */
+@media screen and (max-width: 768px) {
+    /* ヘッダー */
+    .header {
+        padding: 30px 0;
+    }
+    
+    .site-title {
+        font-size: 2rem;
+    }
+    
+    .site-subtitle {
+        font-size: 1rem;
+    }
+    
+    /* メインコンテンツ */
+    .main-content {
+        padding: 30px 0;
+    }
+    
+    .card {
+        padding: 25px;
+        margin-bottom: 30px;
+    }
+    
+    .card-title {
+        font-size: 1.6rem;
+    }
+    
+    /* タイプ選択 */
+    .type-selection {
+        flex-direction: column;
+        gap: var(--space-xl);
+    }
+    
+    .type-selector {
+        max-width: 100%;
+    }
+    
+    .type-select {
+        padding: 18px 24px;
+        font-size: 1.2rem;
+        border-radius: var(--radius);
+        min-height: 60px;
+    }
+    
+    
+    /* 結果セクション */
+    .result-title {
+        font-size: 1.6rem;
+        line-height: 1.4;
+    }
+    
+    .result-details {
+        padding: 25px;
+    }
+    
+    .detail-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    /* メルマガセクション */
+    .newsletter-section {
+        padding: 30px 25px;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+        max-width: 100%;
+    }
+    
+    .email-input {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .btn-secondary {
+        width: 100%;
+    }
+    
+    /* アクションボタン */
+    .action-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .action-buttons .btn {
+        width: 100%;
+    }
+    
+    /* レア度セクション */
+    .rarity-rank {
+        font-size: 1.5rem;
+    }
+    
+    .percentage-number {
+        font-size: 2.5rem;
+    }
+    
+    .rarity-stats {
+        gap: 15px;
+    }
+    
+    .stat-item {
+        flex: 1 1 100%;
+        justify-content: center;
+    }
+    
+    .rarity-story {
+        padding: 15px;
+        font-size: 0.95rem;
+    }
+    
+    .comparison-item span:first-child {
+        font-size: 0.85rem;
+    }
+    
+    /* 組み合わせグリッド */
+    .combinations-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 12px;
+    }
+    
+    .combination-item {
+        padding: 12px;
+    }
+    
+    .combination-title {
+        font-size: 0.85rem;
+    }
+}
+
+/* スマートフォン縦向き (320px - 480px) */
+@media screen and (max-width: 480px) {
+    /* ヘッダー */
+    .header {
+        padding: 25px 0;
+    }
+    
+    .site-title {
+        font-size: 1.8rem;
+    }
+    
+    .site-subtitle {
+        font-size: 0.95rem;
+    }
+    
+    /* コンテナ */
+    .container {
+        padding: 0 10px;
+    }
+    
+    /* カード */
+    .card {
+        padding: 20px;
+        border-radius: var(--radius-small);
+    }
+    
+    .card-title {
+        font-size: 1.4rem;
+        margin-bottom: 8px;
+    }
+    
+    .card-description {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+    
+    /* ボタン */
+    .btn {
+        padding: 12px 24px;
+        font-size: 0.95rem;
+    }
+    
+    #diagnose-btn {
+        min-width: 200px;
+        padding: 16px 32px;
+        font-size: 1.1rem;
+        border-radius: var(--radius);
+    }
+    
+    /* 結果セクション */
+    .result-header {
+        margin-bottom: 20px;
+        padding: 0 5px;
+    }
+    
+    .result-title {
+        font-size: 1.4rem;
+    }
+    
+    .character-subtitle {
+        font-size: 1rem;
+        margin: 0 0 15px 0;
+    }
+    
+    .score-stars {
+        font-size: 1.6rem;
+    }
+    
+    .result-details {
+        margin: 20px 0;
+        padding: 0;
+    }
+    
+    .result-description {
+        margin: 0 5px 20px 5px;
+        padding: 20px;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .detail-section {
+        margin: 0 5px 20px 5px;
+        padding: 20px;
+    }
+    
+    .detail-section h3 {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+    
+    .detail-list li {
+        padding: 8px 0;
+        padding-left: 30px;
+        font-size: 0.95rem;
+    }
+    
+    .detail-list li::before {
+        left: 5px;
+        font-size: 0.9rem;
+    }
+    
+    .caution-list li::before {
+        width: 20px;
+        height: 20px;
+        font-size: 0.8rem;
+        left: 0;
+    }
+    
+    /* メルマガセクション */
+    .newsletter-section {
+        padding: 25px 20px;
+        margin: 30px 5px;
+    }
+    
+    .newsletter-inline {
+        margin: 0 5px 20px 5px !important;
+    }
+    
+    .textbook-image {
+        max-width: 250px;
+    }
+    
+    .newsletter-title {
+        font-size: 1.3rem;
+    }
+    
+    .newsletter-description {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+    
+    /* 全組み合わせ */
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .section-description {
+        font-size: 0.95rem;
+    }
+    
+    .combinations-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .combination-item {
+        padding: 10px;
+    }
+    
+    .combination-types {
+        font-size: 0.85rem;
+    }
+    
+    .combination-score {
+        font-size: 0.9rem;
+    }
+    
+    .combination-title {
+        font-size: 0.8rem;
+        display: none; /* 小画面では非表示 */
+    }
+    
+    /* フッター */
+    .footer {
+        padding: 30px 0;
+    }
+    
+    .disclaimer {
+        font-size: 0.85rem;
+    }
+    
+    /* 最近の結果 */
+    .recent-results h3 {
+        font-size: 1.1rem;
+    }
+    
+    .recent-item {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+    
+    /* シェアメニュー */
+    .share-menu-content {
+        padding: 20px;
+    }
+    
+    .share-buttons {
+        flex-direction: column;
+    }
+    
+    .share-buttons button {
+        width: 100%;
+    }
+}
+
+/* 超小型デバイス (320px以下) */
+@media screen and (max-width: 320px) {
+    .site-title {
+        font-size: 1.6rem;
+    }
+    
+    .card {
+        padding: 15px;
+    }
+    
+    .type-select {
+        font-size: 1rem;
+        padding: 16px 20px;
+        min-height: 56px;
+    }
+    
+    .combinations-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* プリント用スタイル */
+@media print {
+    /* 不要な要素を非表示 */
+    .header,
+    .footer,
+    .action-buttons,
+    .newsletter-section,
+    .all-combinations,
+    .recent-results {
+        display: none !important;
+    }
+    
+    /* カラー調整 */
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+    
+    /* リンクのURL表示 */
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+}
+
+/* アクセシビリティ向上 */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ダークモード対応（将来の拡張用） */
+@media (prefers-color-scheme: dark) {
+    /* 必要に応じてダークモードスタイルを追加 */
+}
+
+/* 高解像度ディスプレイ対応 */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Retina対応のスタイル */
+    .site-title {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+/* 横向き時の調整 */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .header {
+        padding: 20px 0;
+    }
+    
+    .main-content {
+        padding: 20px 0;
+    }
+    
+    .card {
+        padding: 20px;
+    }
+}
